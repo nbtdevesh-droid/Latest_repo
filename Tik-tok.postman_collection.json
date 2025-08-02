@@ -1,0 +1,885 @@
+{
+	"info": {
+		"_postman_id": "552e2689-4b49-4799-8e66-b97fabfa7680",
+		"name": "Tik-tok",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23384250"
+	},
+	"item": [
+		{
+			"name": "App",
+			"item": [
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "save-info",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fullName\": \"test2154874\",\r\n  \"userName\": \"testuser1215425\",\r\n  \"bio\": \"this is test Bio\",\r\n  \"profile\": \"https://gcloutusers3bucket.s3.ap-south-1.amazonaws.com/profile_images/d4250e6c-8703-438a-bc0f-8109fcd932ff.jpg\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/profile/save-info",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"profile",
+										"save-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save-intrest",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"intrest\": [\"Gaming\", \"Music\", \"Dancing\", \"Singing\",\"Reeding-Book\"]\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/profile/save-intrest",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"profile",
+										"save-intrest"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "account-deactive",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/profile/account-deactive",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"profile",
+										"account-deactive"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "account-reactive",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testnbt215@gmail.com\" \r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/profile/account-reactive",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"profile",
+										"account-reactive"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "email-send",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"testnbt214@gmail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/email-send",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"email-send"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signUp",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fullName\": \"testnbt215\",\r\n  \"email\": \"testnbt215@gmail.com\",\r\n  \"userName\": \"testnbt215\",\r\n  \"password\": \"123456\",\r\n  \"dob\": \"22-10-2003\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/signUp",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"signUp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "email-verify",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testnbt214@gmail.com\",\r\n  \"otp\": \"123456\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/email-verify",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"email-verify"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh-token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExYzgzOTVlLTFlZjQtNGI4Zi1hYjI0LWE3Zjg5MDYwNTk1OSIsImRldmljZUlkIjoiYTYwNjI3NjItNThiMy00YTgzLTk0NjktOTg2ODI2NGZiNjZiIiwiaWF0IjoxNzUxNjAzMTkyLCJleHAiOjE3NTQxOTUxOTJ9.Y0_l0d6YjP3kYORR46UiUHhXjKKGi93HmCPqiY6Pvas\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/refresh-token",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"refresh-token"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testnbt215@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/login",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "forgot-password",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testnbt214@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/forgot-password",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"forgot-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create-password",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"email\": \"testnbt215@gmail.com\",\r\n  \"password\":\"123123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/create-password",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"create-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/logout",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout-all",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/auth/logout-all",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"auth",
+										"logout-all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "post",
+					"item": [
+						{
+							"name": "create",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "uploadTime",
+											"value": "2025-06-16T12:00:00Z",
+											"type": "text"
+										},
+										{
+											"key": "tagUsers[]",
+											"value": "60d5ec49f9a1e60f84b1c456",
+											"type": "text"
+										},
+										{
+											"key": "tagUsers[]",
+											"value": "60d5ec49f9a1e60f84b1c789",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This is a test post",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "New Delhi",
+											"type": "text"
+										},
+										{
+											"key": "visibility",
+											"value": "public",
+											"type": "text"
+										},
+										{
+											"key": "allowComment",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/NBT/Downloads/d0b6be8b1d211fee9be7a81219349958.jpg"
+										},
+										{
+											"key": "video",
+											"type": "file",
+											"src": "postman-cloud:///1eeddd2a-3150-4b00-ad84-f0b98d5d2107",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/post/create",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"post",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "story",
+					"item": [
+						{
+							"name": "story-upload",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "media",
+											"type": "file",
+											"src": "postman-cloud:///1f021a3b-19b5-4ba0-b21f-ad7a05738f28"
+										},
+										{
+											"key": "type",
+											"value": "image",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/story/upload",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"story",
+										"upload"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "comment",
+					"item": [
+						{
+							"name": "add-comment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"this is last comment\",\r\n  \"parentType\": \"Post\",\r\n  \"parentId\": \"685a819593259fd292216d4f\",      // ✅ The Post ID (correct)\r\n  \"replyTo\": \"\"        // ✅ The parent comment ID (not the Post ID!)\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/comment/test",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"comment",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-like",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_JWT_TOKEN_HERE"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"parentType\": \"Comment\",\r\n  \"parentId\": \"685baaa4f5146fd48fdac848\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/like/add",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"like",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove-like",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer YOUR_JWT_TOKEN_HERE"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"parentType\": \"Post\",\r\n  \"parentId\": \"685a819593259fd292216d4f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/like/remove",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"like",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-comments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n  \"type\": \"Post\",\r\n  \"id\": \"685a819593259fd292216d4f\"\r\n \r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/comment/get",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"comment",
+										"get"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-all-posts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"this is last comment\",\r\n  \"parentType\": \"Post\",\r\n  \"parentId\": \"685a819593259fd292216d4f\",      // ✅ The Post ID (correct)\r\n  \"replyTo\": \"\"        // ✅ The parent comment ID (not the Post ID!)\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/post/get-all",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"post",
+										"get-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "test",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"this is last comment\",\r\n  \"parentType\": \"Post\",\r\n  \"parentId\": \"685a819593259fd292216d4f\",      // ✅ The Post ID (correct)\r\n  \"replyTo\": \"\",     // ✅ The parent comment ID (not the Post ID!)\r\n  \"email\": \"testnbt215@gmail.com\"\r\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}api/comment/test",
+									"host": [
+										"{{baseUrl}}api"
+									],
+									"path": [
+										"comment",
+										"test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
